@@ -1,0 +1,7 @@
+map l gt
+map h gT
+map S :sidebar bookmarks<cr>
+map s :bmark<cr>
+map <C-s> :sbclose<cr>
+map <S-j> :tabnew! 
+

@@ -1,0 +1,25 @@
+import Control.Applicative
+import Control.Monad
+import Control.Concurrent
+import Control.Concurrent.Async
+import Control.Parallel
+
+import Data.String
+import Data.Char
+import Data.List
+import Data.Monoid
+import Control.Monad.IO.Class
+
+-- You must set your prompt to a lambda, it's a law.
+:set prompt "λ: "
+
+:def hlint const . return $ ":! hlint \"src\""
+:def pl \s -> return $ ":! pointfree \"" ++ s ++ "\""
+:set -Wall
+:set +s
+:unset -fwarn-implicit-prelude
+:unset -fwarn-missing-signatures
+:unset -fwarn-type-defaults
+:set -fno-warn-unused-imports
+:def hoogle \q -> return $ ":! hoogle --color=true --count=15   \"" ++ q ++ "\""
+:def doc    \q -> return $ ":! hoogle --color=true --info       \"" ++ q ++ "\""

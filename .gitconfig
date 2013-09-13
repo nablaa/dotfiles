@@ -1,0 +1,79 @@
+#[user]
+	#name = TODO_DOTFILE
+	#email = TODO_DOTFILE
+
+#[github]
+	#user = TODO_DOTFILE
+	#token = TODO_DOTFILE
+
+[diff]
+	renamelimit=0
+
+[push]
+	default = upstream
+
+[color]
+	ui = true
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = blue bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[alias]
+	ci = commit
+	di = diff
+	dic = diff --cached
+	diw = diff --color-words
+	dip = diff @{1}..
+	st = status
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold red)<%an>%Creset' --abbrev-commit --date=relative
+	lol = log --oneline --decorate --graph
+	hist = log --pretty=format:\"%Cred%h %Cblue%ad%Creset | %s%C(yellow)%d%Creset %Cgreen[%an]%Creset\" --graph --date=short
+	lcrev = log --reverse --no-merges --stat @{1}..
+	mm = merge --ff-only origin/master
+	f = fetch
+
+[merge]
+	tool = threesome
+	conflictstyle = diff3
+
+[mergetool "threesome"]
+	cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+	trustExitCode = true
+
+[tig]
+	show-rev-graph = yes
+	show-refs = yes
+	show-author = yes
+	show-date = "default"
+	author-width = 19
+	line-graphics = "utf8"
+	line-number-interval = 1
+	tab-size = 8
+	horizontal-scroll = 50%
+	split-view-height = 66%
+	commit-encoding = "UTF-8"
+	status-untracked-dirs = no
+
+[core]
+	pager = less -r
+	excludesfile = ~/.gitignore_global
+[help]
+	autocorrect = 1
