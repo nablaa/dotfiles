@@ -266,6 +266,7 @@ let g:tex_flavor='latex'
 " Use // instead of /* */ commenting in C and C++ files
 autocmd FileType c set commentstring=//\ %s
 autocmd FileType cpp set commentstring=//\ %s
+autocmd FileType python set commentstring=#\ %s
 
 " vim-easymotion
 let g:EasyMotion_leader_key = '<Leader>m'
