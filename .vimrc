@@ -122,15 +122,9 @@ set statusline+=%<\                       " cut at start
 set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
 set statusline+=%-40f\                    " relative path
 set statusline+=%1*%{fugitive#statusline()}%*  " git status
-set statusline+=[%{(&fenc==\"\"?&enc:&fenc)} " encoding
-set statusline+=%{((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}] " BOM
-set statusline+=[%{&fo}]                  " formatting options
-set statusline+=[%{&tw}]                  " textwidth
-set statusline+=[%{&ff}]                  " fileformat
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-"set statusline+=[ASCII=\%03.3b][HEX=\%02.2B]
 set statusline+=%=                        " seperate between right- and left-aligned
 set statusline+=%1*%y%*%*\                " file type
 set statusline+=%10((%l,%v/%L)%)\         " line and column
