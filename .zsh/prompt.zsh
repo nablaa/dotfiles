@@ -22,9 +22,6 @@ ${PR_NO_COLOR}]\
 $(git_super_status)\
 %# '
 
-TEMP_RPS1="${PR_LIGHT_YELLOW}(%D{%m-%d %H:%M})${PR_NO_COLOR}"
-RPS1=$TEMP_RPS1 # Temporary variable required for prompt to show correctly
-
 # Show text "-- NORMAL --" when the shell is in VI normal mode
 function zle-line-init zle-keymap-select {
 	RPS1="${${KEYMAP/vicmd/$PR_RED-- NORMAL --$PR_NO_COLOR}/(main|viins)/$TEMP_RPS1}"
