@@ -58,19 +58,19 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Following bundles require manual installation or depend on other bundles
 " req: manual installation
-Bundle 'Shougo/vimproc'
+"Bundle 'Shougo/vimproc'
 " req: manual installation
-Bundle 'wincent/Command-T'
+"Bundle 'wincent/Command-T'
 " req: vimproc, ghc-mod
-Bundle 'eagletmt/ghcmod-vim'
+"Bundle 'eagletmt/ghcmod-vim'
 " req: ghc-mod
-Bundle 'ujihisa/neco-ghc'
+"Bundle 'ujihisa/neco-ghc'
 " req: vimproc
-Bundle 'Shougo/vimshell'
+"Bundle 'Shougo/vimshell'
 " req: lushtags
-Bundle 'bitc/lushtags'
+"Bundle 'bitc/lushtags'
 " req: jedi
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 
 
 filetype plugin indent on
