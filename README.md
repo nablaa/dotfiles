@@ -5,7 +5,7 @@
 Get and install dotfiles:
 
 ```bash
-git clone TODO/dotfiles.git && cd dotfiles && ./install.sh
+git clone https://github.com/nablaa/dotfiles.git && cd dotfiles && ./install.sh
 ```
 
 Install vim plugins:
