@@ -10,9 +10,7 @@ Config { font = "-misc-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
                     , Run DiskU [("/", "/: <used>/<size>"),  ("sda5", "| /home: <used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3", "--normal", "#429942", "--high", "#a0522d", "--low", "#2f4f4f"] 20
                     , Run DiskIO [("/", "/: <read>:<write>"), ("sda5", "| /home: <read>:<write>")] [] 10
                     , Run Date "%_d.%_m.%Y %H:%M:%S" "date" 10
-		    , Run Mail [("inbox", "/var/mail/TODO_DOTFILE")] "systemmail"
-                    --, Run TopProc [] 20
-                    --, Run TopMem [] 20
+                    , Run Com "if mail -e ; then echo -n 'Sysmail: ' &&  mail -p | grep 'Message-Id' | wc -l ; fi" [] "systemmail" 60
                     , Run StdinReader
                     ]
        , sepChar = "%"
