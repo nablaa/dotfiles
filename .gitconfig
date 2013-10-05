@@ -1,10 +1,5 @@
-#[user]
-	#name = TODO_DOTFILE
-	#email = TODO_DOTFILE
-
-#[github]
-	#user = TODO_DOTFILE
-	#token = TODO_DOTFILE
+[include]
+	path = ~/.gitconfig_local
 
 [diff]
 	renamelimit=0
