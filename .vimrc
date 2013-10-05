@@ -333,3 +333,6 @@ endif
 
 " Show detailed information (type) of Haskell symbols.
 let g:necoghc_enable_detailed_browse = 1
+
+" Fix backspace
+set backspace=indent,eol,start
