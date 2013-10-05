@@ -195,6 +195,11 @@ au FileType lua setl shiftwidth=2
 au FileType lua setl softtabstop=2
 au FileType lua setl expandtab
 
+au FileType tex setl tabstop=4
+au FileType tex setl shiftwidth=4
+au FileType tex setl softtabstop=4
+au FileType tex setl expandtab
+
 au FileType html,vim,javascript setl shiftwidth=4
 au FileType html,vim,javascript setl tabstop=4
 au FileType html,vim,javascript setl softtabstop=4
