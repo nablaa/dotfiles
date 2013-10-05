@@ -330,3 +330,6 @@ au BufEnter *.org            call org#SetOrgFileType()
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
+
+" Show detailed information (type) of Haskell symbols.
+let g:necoghc_enable_detailed_browse = 1
