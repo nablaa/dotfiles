@@ -61,6 +61,8 @@ Bundle 'nanotech/jellybeans.vim'
 "Bundle 'Shougo/vimproc'
 " req: manual installation
 "Bundle 'wincent/Command-T'
+" ref: manual installation
+"Bundle 'Valloric/YouCompleteMe'
 " req: vimproc, ghc-mod
 "Bundle 'eagletmt/ghcmod-vim'
 " req: ghc-mod
