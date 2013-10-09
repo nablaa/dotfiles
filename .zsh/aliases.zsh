@@ -13,6 +13,9 @@ alias ..='cd ..'
 alias df='df -h'
 alias g='git'
 alias ack='ack-grep'
+alias t="tmux -2"
+alias ta="tmux attach"
+alias v="vim"
 
 # Package managers
 alias apfs='apt-file search'
