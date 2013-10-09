@@ -353,3 +353,6 @@ let g:necoghc_enable_detailed_browse = 1
 
 " Fix backspace
 set backspace=indent,eol,start
+
+" Ignore not so useful flake8 warnings
+let g:syntastic_python_checker_args = "--ignore=E501,C0111"
