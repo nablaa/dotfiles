@@ -212,9 +212,14 @@ au FileType python setl tabstop=4
 au FileType python setl softtabstop=4
 au FileType python setl expandtab
 
-au FileType java setl shiftwidth=4
-au FileType java setl tabstop=4
-au FileType java setl softtabstop=4
+au FileType ruby setl shiftwidth=2
+au FileType ruby setl tabstop=2
+au FileType ruby setl softtabstop=2
+au FileType ruby setl expandtab
+
+au FileType java setl shiftwidth=2
+au FileType java setl tabstop=2
+au FileType java setl softtabstop=2
 au FileType java setl expandtab
 
 au FileType haskell setl shiftwidth=8
@@ -222,13 +227,18 @@ au FileType haskell setl tabstop=8
 au FileType haskell setl softtabstop=8
 au FileType haskell setl expandtab
 
+au FileType sh setl shiftwidth=4
+au FileType sh setl tabstop=4
+au FileType sh setl softtabstop=4
+au FileType sh setl expandtab
+
 au BufNewFile,BufRead *.xsd	setf xsd
 au BufNewFile,BufRead *.xsl	setf xsl
 au BufNewFile,BufRead *.dtd	setf dtd
-au FileType xml setl tabstop=4
+au FileType xml setl tabstop=2
 au FileType xml setl textwidth=0
-au FileType xml setl softtabstop=4
-au FileType xml setl shiftwidth=4
+au FileType xml setl softtabstop=2
+au FileType xml setl shiftwidth=2
 au FileType xml setl expandtab
 au FileType xsd setl tabstop=2
 au FileType xsd setl textwidth=0
@@ -239,6 +249,10 @@ au FileType xslt setl textwidth=0
 
 au BufNewFile,BufRead *.pde setlocal ft=arduino
 au BufNewFile,BufRead *.ino setlocal ft=arduino
+
+au BufNewFile,BufRead *.config setlocal ft=config
+
+au BufNewFile,BufRead *.gdb setlocal ft=gdb
 
 " Color trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
