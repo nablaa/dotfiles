@@ -43,6 +43,7 @@ myManageHook = (composeAll . concat $
     , className =? "Xmessage"   --> doCenterFloat
     , className =? "XCalc"      --> doCenterFloat
     , className =? "Zenity"     --> doCenterFloat
+    , className =? "feh"        --> doCenterFloat
     , className =? "VirtualBox" --> doShift "9:vbox"
     , className =? "banshee"    --> doShift "8:music"
     , className =? "Banshee"    --> doShift "8:music"
