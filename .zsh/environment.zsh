@@ -1,6 +1,6 @@
-source /etc/zsh_command_not_found
+#source /etc/zsh_command_not_found
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.autojump/etc/profile.d/autojump.zsh
+#source $HOME/.autojump/etc/profile.d/autojump.zsh
 
 # More colors for "ls" command
 eval `dircolors -b`
