@@ -27,6 +27,8 @@ keychain -q id_rsa
 . ~/.keychain/$HOSTNAME-sh
 unset SSH_ASKPASS
 
+xmodmap ~/.xmodmap_esc # Maps CAPS LOCK to ESCAPE
+
 mpd
 sleep 1
 
