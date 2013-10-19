@@ -26,6 +26,7 @@ XTerm*color15:    rgb:f8/fc/f8
 xterm*faceName: DejaVu Sans Mono
 xterm*faceSize: 10
 XTerm*cursorColor: white
+XTerm*termName: xterm-256color
 
 URxvt.loginShell: true
 URxvt.geometry: 80x50
