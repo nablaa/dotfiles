@@ -55,6 +55,13 @@ bindkey '^[[7~' beginning-of-line
 bindkey '^[[8~' end-of-line
 bindkey -M viins 'jj' vi-cmd-mode
 
+# Deleting past the start character in insert mode
+bindkey "^W" backward-kill-word    # vi-backward-kill-word
+bindkey "^H" backward-delete-char  # vi-backward-delete-char
+bindkey "^U" backward-kill-line    # vi-kill-line
+bindkey "^?" backward-delete-char  # vi-backward-delete-char
+
+
 # Special keys
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
