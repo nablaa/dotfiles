@@ -212,6 +212,11 @@ au FileType html,vim setl shiftwidth=4
 au FileType html,vim setl tabstop=4
 au FileType html,vim setl softtabstop=4
 
+au FileType perl setl shiftwidth=4
+au FileType perl setl tabstop=4
+au FileType perl setl softtabstop=4
+au FileType perl setl expandtab
+
 au FileType python setl shiftwidth=4
 au FileType python setl tabstop=4
 au FileType python setl softtabstop=4
