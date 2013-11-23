@@ -8,7 +8,7 @@ xset r rate 500 30
 
 setxkbmap -option "nbsp:none"
 
-trayer --edge top --align right --SetDockType true --expand true --widthtype pixel --width 124 --transparent true --heighttype pixel --height 18 --alpha 0 --tint 0x000000 &
+trayer --edge top --align right --SetDockType true --expand true --widthtype pixel --width 124 --transparent true --heighttype pixel --height 18 --alpha 255 --tint 0x000000 &
 
 xsetroot -cursor_name left_ptr
 feh --bg-scale ~/Downloads/wallpapers/rg-m31.jpg
