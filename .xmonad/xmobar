@@ -3,7 +3,7 @@ Config { font = "-misc-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
        , fgColor = "#405085"
        , position = TopW L 90
        , lowerOnStart = True
-       , commands = [ Run Weather "EFHK" ["-t","<tempC> C","-L","0","-H","25","--normal","#429942","--high","#a36666","--low","lightblue"] 36000
+       , commands = [ Run Weather "EFHK" ["-t","<tempC> °C","-L","0","-H","25","--normal","#429942","--high","#a36666","--low","lightblue"] 36000
                     , Run Network "eth0" ["-L","0","-H","1000","--normal","#429942","--high","#a36666"] 10
                     , Run Cpu ["-L","3","-H","50"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
