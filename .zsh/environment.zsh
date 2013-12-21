@@ -54,6 +54,8 @@ bindkey '^[3;5~' delete-char
 bindkey '^[[7~' beginning-of-line
 bindkey '^[[8~' end-of-line
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
 
 # Deleting past the start character in insert mode
 bindkey "^W" backward-kill-word    # vi-backward-kill-word
