@@ -237,6 +237,11 @@ au FileType haskell setl tabstop=8
 au FileType haskell setl softtabstop=8
 au FileType haskell setl expandtab
 
+au FileType cabal setl shiftwidth=2
+au FileType cabal setl tabstop=2
+au FileType cabal setl softtabstop=2
+au FileType cabal setl expandtab
+
 au FileType sh setl shiftwidth=4
 au FileType sh setl tabstop=4
 au FileType sh setl softtabstop=4
