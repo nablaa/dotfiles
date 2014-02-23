@@ -11,6 +11,7 @@ for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
 done
 
 source ~/.zsh/git-prompt/zshrc.sh
+source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
 
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1='[${PR_BLUE}%n\
@@ -27,6 +28,14 @@ function zle-line-init zle-keymap-select {
 	RPS1="${${KEYMAP/vicmd/$PR_RED-- NORMAL --$PR_NO_COLOR}/(main|viins)/$TEMP_RPS1}"
 	#RPS2=$RPS1
 	zle reset-prompt
+	zle autosuggest-start
 }
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle
+
+# Accept suggestions without leaving insert mode
+bindkey '^f' vi-forward-blank-word
