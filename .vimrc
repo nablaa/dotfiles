@@ -247,6 +247,11 @@ au FileType sh setl tabstop=4
 au FileType sh setl softtabstop=4
 au FileType sh setl expandtab
 
+au FileType cmake setl shiftwidth=4
+au FileType cmake setl tabstop=4
+au FileType cmake setl softtabstop=4
+au FileType cmake setl expandtab
+
 au BufNewFile,BufRead *.xsd	setf xsd
 au BufNewFile,BufRead *.xsl	setf xsl
 au BufNewFile,BufRead *.dtd	setf dtd
