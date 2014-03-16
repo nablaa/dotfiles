@@ -46,6 +46,7 @@
 	mm = merge --ff-only origin/master
 	f = fetch
 	r = rebase
+	g = grep --break --heading --line-number
 
 [merge]
 	tool = splice
@@ -79,3 +80,6 @@
 [rerere]
 	enabled = 1
 
+[grep]
+	extendRegexp = true
+	lineNumber = true
