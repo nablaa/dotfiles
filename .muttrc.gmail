@@ -1,4 +1,4 @@
-source ~/.muttrc.local
+source ~/.muttrc.gmail.local
 source ~/.muttrc.common
 
 # GMail settings
