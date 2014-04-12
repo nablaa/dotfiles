@@ -35,3 +35,6 @@ alias tmux='tmux -2'
 alias nb='newsbeuter'
 alias mp='ncmpcpp'
 alias nset='nvidia-settings'
+
+# Mutt with different accounts
+alias gmail='mutt -F ~/.muttrc.gmail'
