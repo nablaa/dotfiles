@@ -397,3 +397,6 @@ function! s:unite_settings()
   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 endfunction
+
+" Set text width for email messages written in mutt
+au BufRead /tmp/mutt-* set tw=72
