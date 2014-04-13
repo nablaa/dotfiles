@@ -1,3 +1,5 @@
+source "gpg2 -dq $HOME/.muttrc.pwds.gpg |"
+
 source ~/.muttrc.gmail.local
 source ~/.muttrc.common
 
