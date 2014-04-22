@@ -375,8 +375,8 @@ let g:necoghc_enable_detailed_browse = 1
 " Fix backspace
 set backspace=indent,eol,start
 
-" Ignore not so useful flake8 warnings
-let g:syntastic_python_checker_args = "--ignore=E501,C0111"
+" Ignore warnings from too long lines in Python files
+let g:syntastic_python_flake8_args = '--ignore="E501"'
 
 " Unite
 let g:unite_source_history_yank_enable = 1
@@ -400,3 +400,6 @@ endfunction
 
 " Set text width for email messages written in mutt
 au BufRead /tmp/mutt-* set tw=72
+
+" No popup for Python autocompletion
+let g:jedi#popup_on_dot = 0
