@@ -92,7 +92,7 @@ myKeys =
     , ((myModMask .|. shiftMask, xK_s), sendMessage ToggleStruts)
     , ((myModMask .|. shiftMask, xK_p), startupPrograms)
     , ((myModMask .|. shiftMask, xK_f), fullFloatFocused)
-    , ((myModMask, xK_p), spawn "exe=`dmenu_path | dmenu  -i -fn \'-*-fixed-*-*-*-20-*-*-*-*-*-iso8859-15\'` && eval \"exec $exe\"")
+    , ((myModMask, xK_p), spawn "dmenu_run -i -fn \'-*-fixed-*-*-*-20-*-*-*-*-*-iso8859-15\'")
     , ((myModMask .|. shiftMask, xK_t), spawn myTerminalBig)
     , ((myModMask .|. shiftMask, xK_b), spawn "ncmpcpp-status")
     , ((myModMask .|. shiftMask, xK_n), spawn "ncmpcpp pause")
