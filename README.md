@@ -11,7 +11,7 @@ git clone https://github.com/nablaa/dotfiles.git && cd dotfiles && ./install.sh
 Install vim plugins:
 
 ```bash
-vim +BundleInstall +qall
+vim +PluginInstall +qall
 ```
 
 ## Configuration
