@@ -33,10 +33,10 @@ Plugin 'hspec/hspec.vim'
 Plugin 'ivanov/vim-ipython'
 Plugin 'jimenezrick/vimerl'
 Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'kovisoft/slimv'
 Plugin 'majutsushi/tagbar'
 Plugin 'mfukar/robotframework-vim'
-Plugin 'nablaa/vim-rainbow-parenthesis'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'pbrisbin/html-template-syntax'
@@ -286,8 +286,6 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 " Whitespace chars
 set listchars=eol:$,tab:>-,trail:-,extends:>,precedes:<
 
-" Rainbow parenthesis for LISP
-let g:lisp_rainbow = 1
 let g:slimv_repl_syntax = 1
 let g:slimv_swank_clojure = '! xterm -e lein ritz 4005 &'
 
@@ -404,3 +402,9 @@ au BufRead /tmp/mutt-* set tw=72
 
 " No popup for Python autocompletion
 let g:jedi#popup_on_dot = 0
+
+" Use rainbow parenthesis always
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
