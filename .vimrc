@@ -46,9 +46,12 @@ Plugin 'sjl/gundo.vim'
 Plugin 'sjl/splice.vim'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-leiningen'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vimwiki'
@@ -285,9 +288,6 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " Whitespace chars
 set listchars=eol:$,tab:>-,trail:-,extends:>,precedes:<
-
-let g:slimv_repl_syntax = 1
-let g:slimv_swank_clojure = '! xterm -e lein ritz 4005 &'
 
 " vim-latex
 " IMPORTANT: grep will sometimes skip displaying the file name if you
