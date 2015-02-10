@@ -10,9 +10,10 @@ Config { font = "-misc-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
                     , Run DiskU [("/", "/: <used>/<size>"),  ("/home", "| /home: <used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3", "--normal", "#429942", "--high", "#a0522d", "--low", "#2f4f4f"] 20
                     , Run DiskIO [("/", "/: <read>:<write>"), ("/home", "| /home: <read>:<write>")] [] 10
                     , Run Date "%_d.%_m.%Y %H:%M:%S" "date" 10
+                    , Run Com "bash" ["-c", "if mail -e ; then echo -n 'Sysmail' ; fi"] "sysmail" 600
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% | %disku% | %diskio% | %eth0% | %EFHK% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpu% | %memory% | %disku% | %diskio% | %eth0% | %EFHK% | <fc=#ee9a00>%date%</fc> | <fc=#ff0000>%sysmail%</fc>"
        }
