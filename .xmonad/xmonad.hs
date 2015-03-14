@@ -14,6 +14,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.StackSet hiding (workspaces)
 import XMonad.Actions.SpawnOn
 import Data.Monoid
+import XMonad.Hooks.EwmhDesktops
 
 myModMask = mod1Mask  -- rebind Mod to Super key
 myTerminal = "xterm"
@@ -111,4 +112,5 @@ main = do
              , modMask = myModMask
              , logHook = myLogHook xmproc >> ewmhDesktopsLogHook >> setWMName "LG3D"
              , workspaces = myWorkspaces
+             , handleEventHook = fullscreenEventHook -- Fixes fullscreen in Chromium browser
              } `additionalKeys` myKeys
