@@ -16,7 +16,7 @@ import Data.Monoid
 import System.IO
 
 myModMask = mod1Mask  -- rebind Mod to Super key
-myTerminal = "xterm"
+myTerminal = "urxvt"
 myBorderWidth = 2
 myWorkspaces = ["1:web", "2:irc", "3:terms", "4:term", "5:code", "6:dev",
                 "7:misc", "8:music", "9:vbox", "0:empty", "+:empty"]
