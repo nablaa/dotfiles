@@ -83,3 +83,6 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+
+[status]
+	submoduleSummary = true
