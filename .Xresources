@@ -31,7 +31,7 @@ XTerm*termName: xterm-256color
 URxvt.loginShell: true
 URxvt.geometry: 80x50
 URxvt.saveLines: 10000
-URxvt.cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+URxvt.cutchars: "`\"'&()*,;<=>?[\\]^{|}$"
 URxvt.foreground: rgb:a8/a8/a8
 URxvt.background: rgb:00/00/00
 URxvt.color0: rgb:00/00/00
