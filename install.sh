@@ -42,4 +42,7 @@ echo
 echo "Initializing and updating git submodules"
 git submodule update --init
 
+echo "Installing urxvt extensions"
+ln -s -f -v "$DIR/.urxvt/ext/urxvt-font-size/font-size" "$HOME/.urxvt/ext/font-size"
+
 echo "All done."
