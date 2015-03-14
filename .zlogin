@@ -1,2 +1,2 @@
-keychain id_rsa
+keychain --quiet id_rsa
 source ~/.keychain/$HOST-sh
