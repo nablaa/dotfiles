@@ -3,6 +3,7 @@
 
 [diff]
 	renamelimit=0
+	submodule = log
 
 [push]
 	default = upstream
