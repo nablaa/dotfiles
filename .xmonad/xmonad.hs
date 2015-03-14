@@ -1,20 +1,19 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.EZConfig(additionalKeys)
-import System.IO
-import XMonad.Layout.NoBorders
-import XMonad.Layout.Grid
-import XMonad.Layout.ThreeColumns
-import XMonad.Layout.PerWorkspace (onWorkspace)
-import XMonad.Hooks.EwmhDesktops
-import XMonad.Hooks.SetWMName
-import XMonad.Hooks.ManageHelpers
-import XMonad.StackSet hiding (workspaces)
 import XMonad.Actions.SpawnOn
-import Data.Monoid
+import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.SetWMName
+import XMonad.Layout.Grid
+import XMonad.Layout.NoBorders
+import XMonad.Layout.PerWorkspace (onWorkspace)
+import XMonad.Layout.ThreeColumns
+import XMonad.StackSet hiding (workspaces)
+import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.Run(spawnPipe)
+import Data.Monoid
+import System.IO
 
 myModMask = mod1Mask  -- rebind Mod to Super key
 myTerminal = "xterm"
