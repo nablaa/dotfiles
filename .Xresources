@@ -56,7 +56,7 @@ URxvt.italicFont: xft:DejaVuSansMono:size=10
 URxvt.scrollBar: false
 URxvt.visualBell: false
 URxvt.transparent: false
-URxvt.fading: 15
+URxvt.fading: 0
 URxvt.termName: rxvt-unicode-256color
 URxvt.iso14755: false
 URxvt.iso14755_52: false
