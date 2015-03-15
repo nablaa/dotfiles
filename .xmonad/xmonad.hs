@@ -39,11 +39,11 @@ myManageHook = (composeAll . concat $
     , className =? "Xfce4-notifyd" --> doIgnore -- Fixes notification bubbles grabbing focus
     , title     =? "Save As..." --> doCenterFloat
     , title     =? "Save File"  --> doCenterFloat
-    , title     =? "xterm_2"  --> doShift "2:irc"
-    , title     =? "xterm_3"  --> doShift "3:terms"
-    , title     =? "xterm_4"  --> doShift "4:term"
-    , title     =? "xterm_5"  --> doShift "5:code"
-    , title     =? "xterm_8"  --> doShift "8:music"
+    , title     =? "term_2"  --> doShift "2:irc"
+    , title     =? "term_3"  --> doShift "3:terms"
+    , title     =? "term_4"  --> doShift "4:term"
+    , title     =? "term_5"  --> doShift "5:code"
+    , title     =? "term_8"  --> doShift "8:music"
     ]]) <+> manageDocks <+> manageHook defaultConfig
 
 myLogHook xmproc = dynamicLogWithPP $ xmobarPP {
@@ -90,13 +90,13 @@ fullFloatFocused =
     withFocused $ \f -> windows =<< appEndo `fmap` runQuery doFullFloat f
 
 startupPrograms = do
-                  spawn (myTerminal ++ " -title xterm_2")
-                  spawn (myTerminal ++ " -title xterm_3")
-                  spawn (myTerminal ++ " -title xterm_3")
-                  spawn (myTerminal ++ " -title xterm_4")
-                  spawn (myTerminal ++ " -title xterm_5")
-                  spawn (myTerminal ++ " -title xterm_8")
-                  spawn (myTerminal ++ " -title xterm_8")
+                  spawn (myTerminal ++ " -title term_2")
+                  spawn (myTerminal ++ " -title term_3")
+                  spawn (myTerminal ++ " -title term_3")
+                  spawn (myTerminal ++ " -title term_4")
+                  spawn (myTerminal ++ " -title term_5")
+                  spawn (myTerminal ++ " -title term_8")
+                  spawn (myTerminal ++ " -title term_8")
                   spawn "pidgin"
                   spawnOn "1:web" "firefox"
 
