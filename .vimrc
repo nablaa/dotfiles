@@ -53,6 +53,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'ttcn-syntax'
 Plugin 'vimwiki'
 
 " Colorschemes
@@ -255,6 +256,12 @@ au FileType cmake setl shiftwidth=4
 au FileType cmake setl tabstop=4
 au FileType cmake setl softtabstop=4
 au FileType cmake setl expandtab
+
+au BufNewFile,BufRead *.ttcn setf ttcn
+au FileType ttcn setl shiftwidth=2
+au FileType ttcn setl tabstop=2
+au FileType ttcn setl softtabstop=2
+au FileType ttcn setl expandtab
 
 au BufNewFile,BufRead *.xsd	setf xsd
 au BufNewFile,BufRead *.xsl	setf xsl
