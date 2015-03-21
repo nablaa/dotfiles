@@ -228,6 +228,16 @@ au FileType python setl tabstop=4
 au FileType python setl softtabstop=4
 au FileType python setl expandtab
 
+au FileType c setl shiftwidth=4
+au FileType c setl tabstop=4
+au FileType c setl softtabstop=4
+au FileType c setl expandtab
+
+au FileType cpp setl shiftwidth=4
+au FileType cpp setl tabstop=4
+au FileType cpp setl softtabstop=4
+au FileType cpp setl expandtab
+
 au FileType ruby setl shiftwidth=2
 au FileType ruby setl tabstop=2
 au FileType ruby setl softtabstop=2
