@@ -5,7 +5,7 @@ alias clgcc='colorgcc'
 
 # Shortcuts
 alias l='ls -CF'
-alias f='finger'
+alias f='find'
 alias ll='ls -lh'
 alias la='ls -alh'
 alias ls='ls --color=auto '
