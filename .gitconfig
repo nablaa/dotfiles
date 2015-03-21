@@ -46,8 +46,9 @@
 	lcrev = log --reverse --no-merges --stat @{1}..
 	mm = merge --ff-only origin/master
 	f = fetch
-	r = rebase
+	r = rebase --committer-date-is-author-date
 	g = grep --break --heading --line-number
+	b = branch
 
 [merge]
 	tool = splice
