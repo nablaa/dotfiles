@@ -55,6 +55,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'ttcn-syntax'
 Plugin 'vimwiki'
+Plugin 'wting/rust.vim'
 
 " Colorschemes
 Plugin 'sickill/vim-sunburst'
