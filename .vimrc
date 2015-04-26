@@ -296,6 +296,12 @@ au BufNewFile,BufRead *.config setlocal ft=config
 
 au BufNewFile,BufRead *.gdb setlocal ft=gdb
 
+au BufNewFile,BufRead *.gradle set filetype=groovy
+au FileType groovy setl tabstop=4
+au FileType groovy setl softtabstop=4
+au FileType groovy setl shiftwidth=4
+au FileType groovy setl expandtab
+
 " Color trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
