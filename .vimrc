@@ -98,6 +98,8 @@ filetype plugin on
 set autoindent
 
 set wildmenu
+set wildmode=longest,list
+
 set linebreak
 set showcmd
 set incsearch
