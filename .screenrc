@@ -13,7 +13,7 @@ activity "activity -> %n%f %t" # window number , flags of the window , window ti
 bindkey "\033[Z" next
 
 autodetach on
-defscrollback 2000
+defscrollback 30000
 
 
 #termcapinfo xterm* ti@:te@

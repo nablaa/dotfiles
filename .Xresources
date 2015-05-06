@@ -27,10 +27,11 @@ xterm*faceName: DejaVu Sans Mono
 xterm*faceSize: 10
 XTerm*cursorColor: white
 XTerm*termName: xterm-256color
+XTerm*SaveLines: 30000
 
 URxvt.loginShell: true
 URxvt.geometry: 80x50
-URxvt.saveLines: 10000
+URxvt.saveLines: 30000
 URxvt.cutchars: "`\"'()*,;<>[\\]^{|}$"
 URxvt.background: rgb:00/00/00
 URxvt.foreground: rgb:a8/a8/a8
