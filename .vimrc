@@ -304,6 +304,11 @@ au FileType groovy setl softtabstop=4
 au FileType groovy setl shiftwidth=4
 au FileType groovy setl expandtab
 
+au FileType markdown setl tabstop=4
+au FileType markdown setl softtabstop=4
+au FileType markdown setl shiftwidth=4
+au FileType markdown setl expandtab
+
 " Color trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
