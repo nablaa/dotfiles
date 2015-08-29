@@ -58,20 +58,6 @@
 	cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
 	trustExitCode = true
 
-[tig]
-	show-rev-graph = yes
-	show-refs = yes
-	show-author = yes
-	show-date = "default"
-	author-width = 19
-	line-graphics = "utf8"
-	line-number-interval = 1
-	tab-size = 8
-	horizontal-scroll = 50%
-	split-view-height = 66%
-	commit-encoding = "UTF-8"
-	status-untracked-dirs = no
-
 [core]
 	pager = less -r
 	excludesfile = ~/.gitignore_global
