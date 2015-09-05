@@ -18,16 +18,16 @@ Plug 'adinapoli/cumino'
 Plug 'airblade/vim-gitgutter'
 Plug 'chase/vim-ansible-yaml'
 Plug 'confluencewiki.vim'
-Plug 'dag/vim2hs'
-Plug 'ehamberg/haskellmode-vim'
+Plug 'dag/vim2hs', { 'for': 'haskell' }
+Plug 'ehamberg/haskellmode-vim', { 'for': 'haskell' }
 Plug 'godlygeek/tabular'
 Plug 'goldfeld/vim-seek'
 Plug 'gregsexton/MatchTag'
 Plug 'gregsexton/gitv'
-Plug 'guns/vim-clojure-static'
-Plug 'haskell.vim'
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'haskell.vim', { 'for': 'haskell' }
 Plug 'hsanson/vim-android'
-Plug 'hspec/hspec.vim'
+Plug 'hspec/hspec.vim', { 'for': 'haskell' }
 Plug 'ivanov/vim-ipython'
 Plug 'jimenezrick/vimerl'
 Plug 'kergoth/vim-bitbake'
@@ -39,17 +39,17 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'paredit.vim'
 Plug 'pbrisbin/html-template-syntax'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'sjl/splice.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-leiningen'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-salve', { 'for': 'clojure' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'ttcn-syntax'
@@ -66,17 +66,17 @@ Plug 'nanotech/jellybeans.vim'
 
 " Following plugins require manual installation or depend on other plugins
 " req: manual installation
-"Plug 'Shougo/vimproc'
+"Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " req: manual installation
 "Plug 'wincent/Command-T'
 " ref: manual installation
-"Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 " req: vimproc, ghc-mod
-"Plug 'eagletmt/ghcmod-vim'
+"Plug 'eagletmt/ghcmod-vim' | Plug 'Shougo/vimproc.vim'
 " req: ghc-mod
 "Plug 'ujihisa/neco-ghc'
 " req: vimproc
-"Plug 'Shougo/vimshell'
+"Plug 'Shougo/vimshell' | Plug 'Shougo/vimproc.vim'
 " req: lushtags
 "Plug 'bitc/lushtags'
 " req: jedi
