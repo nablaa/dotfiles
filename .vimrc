@@ -316,6 +316,9 @@ au FileType json setl softtabstop=4
 au FileType json setl shiftwidth=4
 au FileType json setl expandtab
 
+" Use ansible-yaml plugin for YAML syntax highlighting and indenting
+au BufNewFile,BufRead *.yml,*.yaml set filetype=ansible
+
 " Color trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
