@@ -20,6 +20,7 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'confluencewiki.vim'
 Plug 'dag/vim2hs', { 'for': 'haskell' }
 Plug 'ehamberg/haskellmode-vim', { 'for': 'haskell' }
+Plug 'elzr/vim-json'
 Plug 'godlygeek/tabular'
 Plug 'goldfeld/vim-seek'
 Plug 'gregsexton/MatchTag'
@@ -309,6 +310,11 @@ au FileType markdown setl tabstop=4
 au FileType markdown setl softtabstop=4
 au FileType markdown setl shiftwidth=4
 au FileType markdown setl expandtab
+
+au FileType json setl tabstop=4
+au FileType json setl softtabstop=4
+au FileType json setl shiftwidth=4
+au FileType json setl expandtab
 
 " Color trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
