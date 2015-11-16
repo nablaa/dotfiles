@@ -102,7 +102,7 @@ startupPrograms = do
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar"
-  xmonad $ defaultConfig {
+  xmonad $ ewmh defaultConfig {
                terminal = myTerminal
              , manageHook = myManageHook
              , layoutHook = myLayoutHook
