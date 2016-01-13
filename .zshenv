@@ -12,3 +12,5 @@ export NNTPSERVER='news.gmane.org'
 # Fix Java problems with XMonad
 # http://www.haskell.org/haskellwiki/Xmonad/Frequently_asked_questions#Problems_with_Java_applications.2C_Applet_java_console
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+export USE_CCACHE=1
