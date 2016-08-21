@@ -99,6 +99,8 @@ filetype indent on
 filetype plugin on
 set autoindent
 
+set shiftround
+
 set wildmenu
 set wildmode=longest,list
 
