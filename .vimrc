@@ -20,6 +20,7 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'confluencewiki.vim'
 Plug 'dag/vim2hs', { 'for': 'haskell' }
 Plug 'ehamberg/haskellmode-vim', { 'for': 'haskell' }
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
 Plug 'godlygeek/tabular'
 Plug 'goldfeld/vim-seek'
