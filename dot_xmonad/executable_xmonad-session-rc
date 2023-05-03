@@ -1,0 +1,43 @@
+#!/bin/bash
+
+rm -f ~/.xmonad/xmonad.state
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+xrdb -merge .Xresources
+xcompmgr -n &
+
+nitrogen --restore &
+
+stalonetray \
+  --icon-gravity E \
+  --geometry 5x1-0+0 \
+  --max-geometry 5x1-0+0 \
+  --background '#000000' \
+  --skip-taskbar \
+  --icon-size 24 \
+  --slot-size 24 \
+  --kludges force_icons_size \
+  --window-strut none \
+&
+
+xsetroot -cursor_name left_ptr
+xsetroot -solid black
+
+xset -b
+xset r rate 500 30
+
+setxkbmap -option "nbsp:none"
+xmodmap ~/.xmodmap_esc
+xscreensaver -no-splash &
+autocutsel &
+
+export SSH_ASKPASS=ssh-askpass
+keychain -q id_rsa
+source ~/.keychain/$HOSTNAME-sh
+unset SSH_ASKPASS
+
+xfce4-notifyd &
+xfce4-power-manager &
+nm-applet --sm-disable &
+
+exec xmonad

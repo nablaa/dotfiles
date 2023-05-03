@@ -1,9 +1,0 @@
-[submodule ".zsh/git-prompt"]
-	path = .zsh/git-prompt
-	url = https://github.com/olivierverdier/zsh-git-prompt.git
-[submodule ".zsh/zsh-syntax-highlighting"]
-	path = .zsh/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".urxvt/ext/urxvt-font-size"]
-	path = .urxvt/ext/urxvt-font-size
-	url = https://github.com/majutsushi/urxvt-font-size.git

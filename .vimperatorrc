@@ -1,7 +1,0 @@
-map l gt
-map h gT
-map S :sidebar bookmarks<cr>
-map s :bmark<cr>
-map <C-s> :sbclose<cr>
-map <S-j> :tabnew! 
-js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
