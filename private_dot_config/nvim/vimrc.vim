@@ -33,9 +33,9 @@ set ic
 " Highlight search
 set hls
 
-set background=dark
-set t_Co=256
-colorscheme inkpot
+"set background=dark
+"set t_Co=256
+colorscheme kanagawa
 
 " No wrap
 set textwidth=0

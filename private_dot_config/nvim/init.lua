@@ -15,8 +15,9 @@ require("lazy").setup({
 	"airblade/vim-gitgutter",
 	"kien/ctrlp.vim",
 	"preservim/tagbar",
-	"vim-scripts/inkpot",
 	{ "neoclide/coc.nvim", branch = "release" },
+	"rebelot/kanagawa.nvim",
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 })
 
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"

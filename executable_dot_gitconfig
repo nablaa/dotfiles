@@ -5,6 +5,7 @@
 	renamelimit=0
 	submodule = log
 	colorMoved = default
+	algorithm = histogram
 	#external = difft
 
 [color]
@@ -98,6 +99,19 @@
 
 [commit]
 	verbose = true
+	gpgsign = true
 
 [hub]
 	host = ghe.spotify.net
+[gpg]
+	format = ssh
+[user]
+	signingkey = ~/.ssh/id_rsa.pub
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)

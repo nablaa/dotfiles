@@ -35,3 +35,5 @@ alias headmessage="git show -s --format=%B HEAD~1"
 alias mysuspend="xscreensaver-command -lock; sleep 3; systemctl suspend"
 
 alias rbuild="cargo build && cargo test && cargo clippy --all-features --tests -- -D warnings && cargo fmt"
+
+alias fd="fdfind"

@@ -21,11 +21,12 @@ myBorderWidth = 2
 myWorkspaces = ["1:web", "2:email", "3:slack", "4:term", "5:code", "6:dev",
                 "7:terms", "8:terms", "9:term", "0:term", "+:term"]
 
-myLayoutHook = onWorkspace "1:web" webLayout $ onWorkspace "3:slack" fullLayout $
+myLayoutHook = onWorkspace "1:web" webLayout $ onWorkspace "3:slack" chatLayout $
                onWorkspace "3:terms" noTitleLayout $ onWorkspace "4:term" fullLayout $
                onWorkspace "9:monitoring" fullLayout $ layouts
-    where layouts = smartBorders $ avoidStruts $ (layoutHook defaultConfig ||| Grid ||| ThreeCol 1 (3/100) (1/2))
+    where layouts = smartBorders $ avoidStruts $ (layoutHook defaultConfig ||| Grid ||| ThreeCol 1 (5/100) (1/3))
           webLayout = smartBorders $ avoidStruts (Tall 1 (3/100) (70/100) ||| Full)
+          chatLayout = smartBorders $ avoidStruts (ThreeCol 1 (3/100) (1/2) ||| Full)
           fullLayout = smartBorders $ noBorders Full
           noTitleLayout = smartBorders $ avoidStruts (Tall 1 (3/100) (1/2))
 
