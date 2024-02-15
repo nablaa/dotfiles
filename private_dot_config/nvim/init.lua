@@ -18,6 +18,7 @@ require("lazy").setup({
 	{ "neoclide/coc.nvim", branch = "release" },
 	"rebelot/kanagawa.nvim",
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	"https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
 })
 
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
