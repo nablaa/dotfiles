@@ -1,3 +1,5 @@
 export PAGER='less'
 export EDITOR="vim"
 export BROWSER="firefox"
+export RUSTC_WRAPPER=sccache
+SCCACHE_CACHE_SIZE="20G"
