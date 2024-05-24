@@ -6,6 +6,8 @@ source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/correction.zsh
 source $HOME/.zsh/functions.zsh
 
+source $HOME/.zsh/zsh-vi-mod/zsh-vi-mode.plugin.zsh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
