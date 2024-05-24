@@ -29,3 +29,6 @@ mods = "Control"
 [[mouse.bindings]]
 action = "PasteSelection"
 mouse = "Middle"
+
+[scrolling]
+history = 100000
