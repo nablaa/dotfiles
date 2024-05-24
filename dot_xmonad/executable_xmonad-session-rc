@@ -35,7 +35,7 @@ keychain -q id_rsa
 source ~/.keychain/$HOSTNAME-sh
 unset SSH_ASKPASS
 
-xfce4-notifyd &
+dunst &
 xfce4-power-manager &
 nm-applet --sm-disable &
 
