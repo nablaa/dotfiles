@@ -28,7 +28,6 @@ xset r rate 500 30
 
 setxkbmap -option "nbsp:none"
 xmodmap ~/.xmodmap_esc
-xscreensaver -no-splash &
 autocutsel &
 
 export SSH_ASKPASS=ssh-askpass

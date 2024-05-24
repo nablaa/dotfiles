@@ -66,7 +66,7 @@ myUrgentColor = "#ffc000"
 myFocusedBorderColor = "#FF0000"
 
 myKeys =
-    [ ((myModMask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
+    [ ((myModMask .|. shiftMask, xK_l), spawn "xsecurelock-lock")
     , ((myModMask .|. shiftMask, xK_s), sendMessage ToggleStruts)
     , ((myModMask .|. shiftMask, xK_p), startupPrograms)
     , ((myModMask .|. shiftMask, xK_f), fullFloatFocused)
