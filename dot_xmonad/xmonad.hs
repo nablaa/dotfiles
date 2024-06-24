@@ -35,21 +35,17 @@ myManageHook = (composeAll . concat $
 
 myLogHook xmproc = dynamicLogWithPP $ xmobarPP {
                      ppOutput = hPutStrLn xmproc
-                   , ppTitle = xmobarColor lightTextColor "" . shorten myTitleLength
-                   , ppCurrent = xmobarColor focusColor "" . wrap myCurrentWSLeft myCurrentWSRight
-                   , ppVisible = xmobarColor lightTextColor "" . wrap myVisibleWSLeft myVisibleWSRight
-                   , ppHiddenNoWindows = xmobarColor lightBackgroundColor ""
+                   , ppTitle = xmobarColor myTitleColor "" . shorten myTitleLength
+                   , ppCurrent = xmobarColor myCurrentColor "" . wrap myCurrentWSLeft myCurrentWSRight
+                   , ppVisible = xmobarColor myTitleColor "" . wrap myVisibleWSLeft myVisibleWSRight
                    , ppUrgent = xmobarColor myUrgentColor "" . wrap myUrgentWSLeft myUrgentWSRight
                    , ppSep = " :: "
                    , ppWsSep = " "
                    }
 
-focusColor = "#7878E3"
-textColor = "#0A34BF"
-lightTextColor = "#8686D1"
-backgroundColor = "#5071DE"
-lightBackgroundColor = "#241D40"
-myUrgentColor = "#ffc000"
+myCurrentColor = "#e6744c"
+myTitleColor = "#eeeeee"
+myUrgentColor = "#cc0000"
 myFocusedBorderColor = "#FF0000"
 myCurrentWSLeft  = "["        -- wrap active workspace with these
 myCurrentWSRight = "]"
