@@ -1,7 +1,8 @@
-Config { font = "-misc-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
+Config { font = "DejaVu Sans Mono 11"
+       , allDesktops = True
        , bgColor = "#000000"
        , fgColor = "#7878E3"
-       , position = TopW L 90
+       , position = TopW L 100
        , lowerOnStart = True
        , commands = [ Run Weather "ESSA" ["-t","<tempC> °C","-L","0","-H","25","--normal","#429942","--high","#a36666","--low","lightblue"] 36000
                     , Run Network "eth0" ["-L","0","-H","1000","--normal","#429942","--high","#a36666"] 10
@@ -18,5 +19,5 @@ Config { font = "-misc-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %loadavg% | %cpu% | %memory% | %diskio% | %battery% | %ESSA% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %loadavg% | %cpu% | %memory% | %diskio% | %battery% | %ESSA% | <fc=#ee9a00>%date%</fc> |                 "
        }

@@ -20,6 +20,7 @@ myModMask = mod1Mask  -- rebind Mod to Super key
 myTerminal = "alacritty"
 myBorderWidth = 2
 myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+"]
+myTitleLength = 50
 
 myLayoutHook = onWorkspace "1" webLayout $ onWorkspace "4" fullLayout $ layouts
     where layouts = smartBorders $ avoidStruts $ (layoutHook def ||| Grid ||| ThreeCol 1 (5/100) (1/3))
@@ -34,7 +35,7 @@ myManageHook = (composeAll . concat $
 
 myLogHook xmproc = dynamicLogWithPP $ xmobarPP {
                      ppOutput = hPutStrLn xmproc
-                   , ppTitle = xmobarColor lightTextColor ""
+                   , ppTitle = xmobarColor lightTextColor "" . shorten myTitleLength
                    , ppCurrent = xmobarColor focusColor ""
                    , ppVisible = xmobarColor lightTextColor ""
                    , ppHiddenNoWindows = xmobarColor lightBackgroundColor ""
