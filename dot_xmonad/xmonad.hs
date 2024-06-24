@@ -12,39 +12,25 @@ import XMonad.Layout.ThreeColumns
 import XMonad.StackSet hiding (workspaces)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.Run(spawnPipe)
+import qualified XMonad.Util.Hacks as Hacks
 import Data.Monoid
 import System.IO
 
 myModMask = mod1Mask  -- rebind Mod to Super key
 myTerminal = "alacritty"
 myBorderWidth = 2
-myWorkspaces = ["1:web", "2:email", "3:slack", "4:term", "5:code", "6:dev",
-                "7:terms", "8:terms", "9:term", "0:term", "+:term"]
+myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+"]
 
-myLayoutHook = onWorkspace "1:web" webLayout $ onWorkspace "3:slack" chatLayout $
-               onWorkspace "3:terms" noTitleLayout $ onWorkspace "4:term" fullLayout $
-               onWorkspace "9:monitoring" fullLayout $ layouts
-    where layouts = smartBorders $ avoidStruts $ (layoutHook defaultConfig ||| Grid ||| ThreeCol 1 (5/100) (1/3))
+myLayoutHook = onWorkspace "1" webLayout $ onWorkspace "4" fullLayout $ layouts
+    where layouts = smartBorders $ avoidStruts $ (layoutHook def ||| Grid ||| ThreeCol 1 (5/100) (1/3))
           webLayout = smartBorders $ avoidStruts (Tall 1 (3/100) (70/100) ||| Full)
-          chatLayout = smartBorders $ avoidStruts (ThreeCol 1 (3/100) (1/2) ||| Full)
           fullLayout = smartBorders $ noBorders Full
-          noTitleLayout = smartBorders $ avoidStruts (Tall 1 (3/100) (1/2))
 
 myManageHook = (composeAll . concat $
     [[isFullscreen              --> doFullFloat
     , className =? "Xmessage"   --> doCenterFloat
-    , className =? "XCalc"      --> doCenterFloat
-    , className =? "Zenity"     --> doCenterFloat
-    , className =? "feh"        --> doCenterFloat
     , className =? "Xfce4-notifyd" --> doIgnore -- Fixes notification bubbles grabbing focus
-    , title     =? "Save As..." --> doCenterFloat
-    , title     =? "Save File"  --> doCenterFloat
-    , title     =? "term_2"  --> doShift "2:irc"
-    , title     =? "term_3"  --> doShift "3:terms"
-    , title     =? "term_4"  --> doShift "4:term"
-    , title     =? "term_5"  --> doShift "5:code"
-    , title     =? "term_8"  --> doShift "8:music"
-    ]]) <+> manageDocks <+> manageHook defaultConfig
+    ]]) <+> manageDocks <+> manageHook def
 
 myLogHook xmproc = dynamicLogWithPP $ xmobarPP {
                      ppOutput = hPutStrLn xmproc
@@ -67,23 +53,12 @@ myFocusedBorderColor = "#FF0000"
 
 myKeys =
     [ ((myModMask .|. shiftMask, xK_l), spawn "xsecurelock-lock")
-    , ((myModMask .|. shiftMask, xK_s), sendMessage ToggleStruts)
-    , ((myModMask .|. shiftMask, xK_p), startupPrograms)
     , ((myModMask .|. shiftMask, xK_f), fullFloatFocused)
     , ((myModMask, xK_p), spawn "dmenu_run -i -fn \'-*-fixed-*-*-*-20-*-*-*-*-*-iso8859-15\'")
-    , ((myModMask .|. shiftMask, xK_b), spawn "ncmpcpp-status")
-    , ((myModMask .|. shiftMask, xK_n), spawn "ncmpcpp pause")
-    , ((myModMask .|. shiftMask, xK_m), spawn "ncmpcpp play")
-    , ((myModMask .|. shiftMask, xK_comma), spawn "ncmpcpp prev")
-    , ((myModMask .|. shiftMask, xK_period), spawn "ncmpcpp next")
     , ((0, 0x1008FF11), spawn "pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send Volume 'Lower volume'") -- XF86XK_AudioLowerVolume
     , ((0, 0x1008FF13), spawn "pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send Volume 'Raise volume'") -- XF86XK_AudioRaiseVolume
     , ((0, 0x1008FF12), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle && amixer set PCM unmute && notify-send Volume 'Toggle mute'") -- XF86XK_AudioMute
-    --, ((0, 0x1008FF11), spawn "amixer set Master 2- && notify-send Volume 'Lower volume'") -- XF86XK_AudioLowerVolume
-    --, ((0, 0x1008FF13), spawn "amixer set Master 2+ && notify-send Volume 'Raise volume'") -- XF86XK_AudioRaiseVolume
-    --, ((0, 0x1008FF12), spawn "amixer set Master toggle && amixer set PCM unmute && notify-send Volume 'Toggle mute'") -- XF86XK_AudioMute
     ]
-    -- More workspaces
     ++
     [((m .|. myModMask, k), windows $ f i)
     | (i, k) <- zip myWorkspaces [xK_1, xK_2, xK_3, xK_4, xK_5, xK_6, xK_7, xK_8, xK_9, xK_0, xK_plus]
@@ -92,27 +67,16 @@ myKeys =
 fullFloatFocused =
     withFocused $ \f -> windows =<< appEndo `fmap` runQuery doFullFloat f
 
-startupPrograms = do
-                  spawn (myTerminal ++ " -title term_2")
-                  spawn (myTerminal ++ " -title term_3")
-                  spawn (myTerminal ++ " -title term_3")
-                  spawn (myTerminal ++ " -title term_4")
-                  spawn (myTerminal ++ " -title term_5")
-                  spawn (myTerminal ++ " -title term_8")
-                  spawn (myTerminal ++ " -title term_8")
-                  spawn "pidgin"
-                  spawnOn "1:web" "firefox"
-
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar"
-  xmonad $ docks $ ewmh defaultConfig {
+  xmonad $ docks $ ewmhFullscreen $ ewmh def {
                terminal = myTerminal
              , manageHook = myManageHook
              , layoutHook = myLayoutHook
              , borderWidth = myBorderWidth
              , focusedBorderColor = myFocusedBorderColor
              , modMask = myModMask
-             , logHook = myLogHook xmproc >> ewmhDesktopsLogHook >> setWMName "LG3D"
+             , logHook = myLogHook xmproc >> setWMName "LG3D"
              , workspaces = myWorkspaces
-             , handleEventHook = fullscreenEventHook -- Fixes fullscreen in Chromium browser
+             , handleEventHook = Hacks.trayerAboveXmobarEventHook <> Hacks.trayerPaddingXmobarEventHook
              } `additionalKeys` myKeys
