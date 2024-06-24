@@ -1,17 +1,14 @@
 Config { font = "DejaVu Sans Mono 11"
        , allDesktops = True
-       , bgColor = "#000000"
-       , fgColor = "#7878E3"
+       , bgColor = "black"
+       , fgColor = "#e2dedc"
        , position = TopW L 100
        , lowerOnStart = True
        , commands = [ Run Weather "ESSA" ["-t","<tempC> °C","-L","0","-H","25","--normal","#429942","--high","#a36666","--low","lightblue"] 36000
-                    , Run Network "eth0" ["-L","0","-H","1000","--normal","#429942","--high","#a36666"] 10
                     , Run Cpu ["-L","3","-H","50"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run DiskU [("/", "/: <used>/<size>"),  ("/home", "| /home: <used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3", "--normal", "#429942", "--high", "#a0522d", "--low", "#2f4f4f"] 20
                     , Run DiskIO [("/", "/: <read>:<write>"), ("/home", "| /home: <read>:<write>")] [] 10
                     , Run Date "%_d.%_m.%Y %H:%M:%S" "date" 10
-                    --, Run Load ["-t" , "<load1> <load5> <load15>" , "-L", "1", "-H", "3", "-d", "2"] 300
                     , Run Com "sh" ["-c", "awk '{ print $1, $2, $3 }' /proc/loadavg"] "loadavg" 10
                     , Run Com "bash" ["-c", "if mail -e ; then echo -n 'Sysmail' ; fi"] "sysmail" 600
                     , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>On</fc> - ", "-i", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green", "-a", "notify-send -u critical 'Battery running out!!'", "-A", "3"] 600
