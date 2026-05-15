@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  "sindrets/diffview.nvim",
+  "samoshkin/vim-mergetool",
 	"airblade/vim-gitgutter",
 	"kien/ctrlp.vim",
 	"preservim/tagbar",
@@ -19,7 +21,25 @@ require("lazy").setup({
 	"rebelot/kanagawa.nvim",
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 	"https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = true,
+  },
 })
 
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
+
+vim.diagnostic.config({
+  -- Use the default configuration
+  virtual_lines = true
+
+  -- Alternatively, customize specific options
+  -- virtual_lines = {
+  --  -- Only show virtual line diagnostics for the current cursor line
+  --  current_line = true,
+  -- },
+})
+

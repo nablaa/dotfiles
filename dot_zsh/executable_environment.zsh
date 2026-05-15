@@ -16,7 +16,7 @@ GREP_OPTIONS="--color=auto"
 # I - Case insensitive search
 # s - Squeeze empty lines to one
 # w - Highlight first line after PgDn
-export LESS="-RSM~gIsw"
+export LESS="-RSM~gIsw --quit-if-one-screen"
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -53,7 +53,7 @@ bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
 bindkey '^[[7~' beginning-of-line
 bindkey '^[[8~' end-of-line
-bindkey -M viins 'jj' vi-cmd-mode
+#bindkey -M viins 'jj' vi-cmd-mode
 bindkey "^P" up-line-or-search
 bindkey "^N" down-line-or-search
 

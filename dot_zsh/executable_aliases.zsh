@@ -10,7 +10,7 @@ alias g='git'
 alias ack='ack-grep'
 alias t="tmux -2"
 alias ta="tmux attach"
-alias v="vim"
+alias v="nvim"
 
 # Package managers
 alias apfs='apt-file search'
@@ -34,6 +34,10 @@ alias headmessage="git show -s --format=%B HEAD~1"
 
 alias mysuspend="xscreensaver-command -lock; sleep 3; systemctl suspend"
 
-alias rbuild="cargo build && cargo test && cargo clippy --all-features --tests -- -D warnings && cargo fmt"
+alias rbuild="cargo build && cargo nextest run && cargo clippy --all-features --tests -- -D warnings -D clippy::expect_used -D clippy::panic -D clippy::unimplemented -D clippy::unwrap_used && cargo fmt"
 
 alias fd="fdfind"
+
+alias bat="batcat"
+
+alias pulls="gh search prs --author $USER --state open"

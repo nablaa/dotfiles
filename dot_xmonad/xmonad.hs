@@ -81,5 +81,5 @@ main = do
              , modMask = myModMask
              , logHook = myLogHook xmproc >> setWMName "LG3D"
              , workspaces = myWorkspaces
-             , handleEventHook = Hacks.trayerAboveXmobarEventHook <> Hacks.trayerPaddingXmobarEventHook
+             , handleEventHook = Hacks.windowedFullscreenFixEventHook <> Hacks.trayerAboveXmobarEventHook <> Hacks.trayerPaddingXmobarEventHook
              } `additionalKeys` myKeys

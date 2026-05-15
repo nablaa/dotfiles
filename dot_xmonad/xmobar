@@ -19,5 +19,5 @@ Config { font = "DejaVu Sans Mono 11"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpufreq% / %cpupower% | %loadavg% | %cpu% | %memory% | %battery% | %ESSA% | %default:Master% | %wlp0s20f3wi% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpufreq% / %cpupower% | %loadavg% | %cpu% | %memory% | %battery% | %default:Master% | %wlp0s20f3wi% | <fc=#ee9a00>%date%</fc>         "
        }

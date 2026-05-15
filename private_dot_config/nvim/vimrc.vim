@@ -59,7 +59,7 @@ set statusline+=%1*%y%*%*\                " file type
 set statusline+=%10((%l,%v/%L)%)\         " line and column
 set statusline+=%P                        " percentage of file
 
-set pastetoggle=<F2>
+"set pastetoggle=<F2>
 
 " disable ex mode
 nmap Q q

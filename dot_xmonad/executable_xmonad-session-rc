@@ -10,12 +10,11 @@ nitrogen --restore &
 
 stalonetray \
   --icon-gravity E \
-  --geometry 5x1-0+0 \
-  --max-geometry 5x1-0+0 \
+  --geometry 3x1-0+0 \
   --background '#000000' \
   --skip-taskbar \
-  --icon-size 24 \
-  --slot-size 24 \
+  --icon-size 20 \
+  --slot-size 20 \
   --kludges force_icons_size \
   --window-strut none \
 &
@@ -35,8 +34,10 @@ keychain -q id_rsa
 source ~/.keychain/$HOSTNAME-sh
 unset SSH_ASKPASS
 
+systemctl --user import-environment SSH_AUTH_SOCK SSH_AGENT_PID
+systemctl --user set-environment SSH_AUTH_SOCK="$SSH_AUTH_SOCK" SSH_AGENT_PID="$SSH_AGENT_PID"
+
 dunst &
-xfce4-power-manager &
 nm-applet --sm-disable &
 
 exec xmonad
