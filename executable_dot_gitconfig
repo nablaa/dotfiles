@@ -143,6 +143,6 @@
 [branch]
 	sort = -committerdate
 [fetch]
-	prune = true
-	pruneTags = true
+	#prune = true
+	#pruneTags = true
 	all = true

@@ -12,3 +12,11 @@ parse() {
 gpush() {
 	git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"
 }
+
+cask() {
+  codex e \
+    --skip-git-repo-check \
+    --sandbox read-only \
+    --ephemeral \
+    "$@"
+}

@@ -2,5 +2,6 @@ export PAGER='less'
 export EDITOR="nvim"
 export BROWSER="firefox"
 SCCACHE_CACHE_SIZE="20G"
+export ANDROID_ADB="$HOME/Android/Sdk/platform-tools/adb"
 
 source ~/.zshenv_local

@@ -15,9 +15,10 @@ Config { font = "DejaVu Sans Mono 11"
                     , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>On</fc> - ", "-i", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green", "-a", "notify-send -t 0 -u critical 'Battery running out!!'", "-A", "5"] 60
 		    , Run Volume "default" "Master" [] 10
 		    , Run Wireless "wlp0s20f3" [] 10
+                    , Run Com "sh" ["-c", "free=$(df -BG --output=avail / | tail -1 | tr -d ' G'); [ \"$free\" -lt 20 ] && echo \"<fc=red>Disk: ${free}G free!</fc>\" || echo \"\""] "diskwarn" 300
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpufreq% / %cpupower% | %loadavg% | %cpu% | %memory% | %battery% | %default:Master% | %wlp0s20f3wi% | <fc=#ee9a00>%date%</fc>         "
+       , template = "%StdinReader% }{ %diskwarn%%cpufreq% / %cpupower% | %loadavg% | %cpu% | %memory% | %battery% | %default:Master% | %wlp0s20f3wi% | <fc=#ee9a00>%date%</fc>         "
        }
