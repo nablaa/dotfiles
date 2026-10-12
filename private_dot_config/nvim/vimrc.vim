@@ -329,8 +329,7 @@ nnoremap <C-X> :bdelete<CR>
 " Fix sign column background color
 highlight clear SignColumn
 
-au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
-au BufEnter *.org            call org#SetOrgFileType()
+au BufNewFile,BufRead *.org setfiletype org
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -441,8 +440,6 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
-
-au FileType lisp call rainbow#load()
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()

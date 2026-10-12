@@ -32,7 +32,7 @@ alias p3="python3"
 
 alias headmessage="git show -s --format=%B HEAD~1"
 
-alias mysuspend="xscreensaver-command -lock; sleep 3; systemctl suspend"
+alias mysuspend="xscreensaver-command -lock && sleep 3 && systemctl suspend"
 
 alias rbuild="cargo build && cargo nextest run && cargo clippy --all-features --tests -- -D warnings -D clippy::expect_used -D clippy::panic -D clippy::unimplemented -D clippy::unwrap_used && cargo fmt"
 

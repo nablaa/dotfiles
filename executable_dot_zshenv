@@ -4,4 +4,6 @@ export BROWSER="firefox"
 SCCACHE_CACHE_SIZE="20G"
 export ANDROID_ADB="$HOME/Android/Sdk/platform-tools/adb"
 
-source ~/.zshenv_local
+if [[ -r "$HOME/.zshenv_local" ]]; then
+    source "$HOME/.zshenv_local"
+fi
