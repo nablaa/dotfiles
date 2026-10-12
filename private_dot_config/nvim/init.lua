@@ -21,12 +21,6 @@ require("lazy").setup({
 	"rebelot/kanagawa.nvim",
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 	"https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = 'Copilot',
-    event = 'InsertEnter',
-    config = true,
-  },
 })
 
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
